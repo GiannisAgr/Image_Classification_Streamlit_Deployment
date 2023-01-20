@@ -1,4 +1,4 @@
-# Vegetable Classification
+# **Vegetable Classification**
 
 # The model was trained with 15 classes :
               ('Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
