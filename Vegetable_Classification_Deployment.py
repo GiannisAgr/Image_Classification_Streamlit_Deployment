@@ -32,14 +32,10 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    with st.spinner("Loading Model...."):
-        model = tf.keras.models.load_model('my_model')
+    model = tf.keras.models.load_model('my_model')
     return model
 
 
-# with st.spinner("Loading Model...."):
-#     model=load_model()
-    
 
 def get_image(url):
     img = requests.get(url)
