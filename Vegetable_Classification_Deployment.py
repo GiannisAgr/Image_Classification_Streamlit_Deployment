@@ -23,7 +23,7 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
 path = os.path.dirname(__file__)
-my_file = 'GiannisAgr/Image_Classification_Streamlit_Deployment/my_model/saved_model.pb'
+my_file = 'my_model/saved_model.pb'
 model = tf.saved_model.load(my_file)
 
 def get_image(url):
