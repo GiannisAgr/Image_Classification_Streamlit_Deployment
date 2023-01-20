@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 import requests
+import pickle
 
 @st.cache
 def get_prediction_single_image(model, directory):
@@ -31,10 +32,9 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
 def load_model():
     path = os.path.dirname(__file__)
     my_file = path+'model.pkl'
-    model = tf.keras.models.load_model(my_file, compile=False)
+#     model = tf.keras.models.load_model(my_file, compile=False)
+    model = pickle.load(my_file)
     return model
-
-model = load_model()
 
 @st.cache
 def get_image(url):
