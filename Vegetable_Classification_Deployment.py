@@ -32,7 +32,7 @@ def load_model():
     model = tf.keras.models.load_model('my_model/saved_model.pb')
     return model
 
-model = load_model()
+# model = load_model()
 
 @st.cache
 def get_image(url):
