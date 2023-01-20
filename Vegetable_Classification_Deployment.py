@@ -33,9 +33,20 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
-path = os.path.dirname(__file__)
-my_file = path+'/my_model'
-model = tf.keras.models.load_model(my_file)
+#path = os.path.dirname(__file__)
+#my_file = path+'/my_model'
+#model = tf.keras.models.load_model(my_file)
+
+#load model, set cache to prevent reloading
+@st.cache(allow_output_mutation=True)
+def load_model():
+    model=tf.keras.models.load_model('my_model/saved_model.pb')
+    return model
+
+
+with st.spinner("Loading Model...."):
+    model=load_model()
+    
 
 def get_image(url):
     img = requests.get(url)
