@@ -37,9 +37,6 @@ path = os.path.dirname(file)
 my_file = path+'/saved_model.pb'
 model = keras.models.load_model(my_file)
 
-model = keras.models.load_model("saved_model.pb")
-
-
 def get_image(url):
     img = requests.get(url)
     file = open('sample_image.jpg', 'wb')
