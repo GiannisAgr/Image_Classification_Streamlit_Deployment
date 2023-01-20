@@ -33,6 +33,10 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
+path = os.path.dirname(file)
+my_file = path+'/saved_model.pb'
+model = keras.models.load_model(my_file)
+
 model = keras.models.load_model("saved_model.pb")
 
 
