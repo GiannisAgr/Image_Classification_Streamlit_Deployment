@@ -30,12 +30,10 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
 @st.cache(allow_output_mutation=True)
 def load_model():
     path = os.path.dirname(__file__)
-    my_file = path+'my_model'
+    my_file = path+'model.pkl'
     model = tf.keras.models.load_model(my_file, compile=False)
     return model
 
-
-# model = load_model()
 
 @st.cache
 def get_image(url):
