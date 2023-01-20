@@ -1,6 +1,6 @@
 import os
 
-path = 'GiannisAgr/Image_Classification_Streamlit_Deployment/my_model/saved_model.pb'
+path = 'GiannisAgr/Image_Classification_Streamlit_Deployment/rtvdggfmy_model/saved_model.pb'
 
 if os.path.isfile(path):
     print("Model file found at:", path)
