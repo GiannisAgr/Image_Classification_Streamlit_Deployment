@@ -1,6 +1,6 @@
 import os
 
-path = 'https://github.com/GiannisAgr/Image_Classification_Streamlit_Deployment/blob/main/my_model'
+path = 'https://github.com/GiannisAgr/Image_Classification_Streamlit_Deployment/my_model'
 
 if os.path.isfile(path):
     print("Model file found at:", path)
