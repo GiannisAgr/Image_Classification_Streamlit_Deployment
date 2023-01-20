@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
 
 import os
 
@@ -35,7 +33,7 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
-model = keras.models.load_model("D:\\data_projects\\veggie_classification\\my_model")
+model = keras.models.load_model("saved_model.pb")
 
 
 def get_image(url):
