@@ -1,6 +1,6 @@
 # **Vegetable Classification**
 
-# The model was trained with 15 classes :
+# <sub>The model was trained with 15 classes :<sub>
               ('Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato')
