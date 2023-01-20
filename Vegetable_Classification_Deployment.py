@@ -34,6 +34,7 @@ def load_model():
     model = tf.keras.models.load_model(my_file, compile=False)
     return model
 
+model = load_model()
 
 @st.cache
 def get_image(url):
