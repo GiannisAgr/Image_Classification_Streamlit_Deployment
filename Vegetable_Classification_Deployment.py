@@ -28,15 +28,15 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
 
-# @st.cache(allow_output_mutation=True)
-# def load_model():
-# #     path = os.path.dirname(__file__)
-# #     my_file = path+'model.pkl'
-# #     model = tf.keras.models.load_model(my_file, compile=False)
-#     model = pickle.load('model.pkl')
-#     return model
+@st.cache(allow_output_mutation=True)
+def load_model():
+    path = os.path.dirname(__file__)
+    my_file = path+'my_model_h5.h5'
+    model = tf.keras.models.load_model(my_file, compile=False)
+    return model
 
-model = pickle.load(open('model.pkl','rb'))
+model = load_model()
+
 
 @st.cache
 def get_image(url):
