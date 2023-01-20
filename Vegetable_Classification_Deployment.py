@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import requests
 
-
+@st.cache
 def get_prediction_single_image(model, directory):
     
     img = tf.keras.preprocessing.image.load_img(directory, target_size=(224, 224, 3))
@@ -35,8 +35,7 @@ def load_model():
     model = tf.keras.models.load_model('my_model')
     return model
 
-model = load_model()
-
+@st.cache
 def get_image(url):
     img = requests.get(url)
     file = open('sample_image.jpg', 'wb')
