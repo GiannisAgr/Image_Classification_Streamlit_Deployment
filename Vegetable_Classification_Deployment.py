@@ -36,6 +36,8 @@ def load_model():
     model = pickle.load(my_file)
     return model
 
+model = load_model()
+
 @st.cache
 def get_image(url):
     img = requests.get(url)
