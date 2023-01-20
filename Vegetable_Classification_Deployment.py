@@ -40,7 +40,7 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
 #load model, set cache to prevent reloading
 @st.cache(allow_output_mutation=True)
 def load_model():
-    model=tf.keras.models.load_model('my_model')
+    model=tf.keras.models.load_model('saved_model.pb')
     return model
 
 
