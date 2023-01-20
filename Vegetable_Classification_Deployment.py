@@ -35,7 +35,7 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
 
 path = os.path.dirname(__file__)
 my_file = path+'/my_model'
-model = tf.keras.models.load_model(my_file, compile=False)
+model = tf.keras.models.load_model(my_file)
 
 def get_image(url):
     img = requests.get(url)
