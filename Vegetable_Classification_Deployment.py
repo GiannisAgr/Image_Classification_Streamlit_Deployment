@@ -30,9 +30,9 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
 
-# path = os.path.dirname(__file__)
-# my_file = path+'/saved_model.pb'
-model = tf.keras.models.load_model('my_model')
+path = os.path.dirname(__file__)
+my_file = path+'/my_model'
+model = tf.keras.models.load_model('my_file')
 
 #load model, set cache to prevent reloading
 #@st.cache(allow_output_mutation=True)
