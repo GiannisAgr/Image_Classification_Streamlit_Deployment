@@ -56,7 +56,7 @@ if url:
     if Classify:
         st.write("")
         st.write("Classifying...")
-        label = get_prediction_single_image(model, image)
+        label = get_prediction_single_image(load_model(), image)
         st.write(str(label))
 else:
     st.write("Paste Image URL")
