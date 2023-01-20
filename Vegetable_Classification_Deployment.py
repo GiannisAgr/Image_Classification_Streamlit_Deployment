@@ -35,7 +35,7 @@ def load_model():
     model = tf.keras.models.load_model('my_model')
     return model
 
-
+model = load_model()
 
 def get_image(url):
     img = requests.get(url)
@@ -56,7 +56,7 @@ if url:
     if Classify:
         st.write("")
         st.write("Classifying...")
-        label = get_prediction_single_image(load_model(), image)
+        label = get_prediction_single_image(model, image)
         st.write(str(label))
 else:
     st.write("Paste Image URL")
