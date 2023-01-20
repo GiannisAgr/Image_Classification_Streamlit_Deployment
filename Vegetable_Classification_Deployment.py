@@ -30,25 +30,15 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
 
-# path = os.path.dirname(__file__)
-# my_file = path+'/my_model'
-# model = tf.keras.models.load_model('my_file')
-
 @st.cache(allow_output_mutation=True)
 def load_model():
-  model = tf.keras.models.load_model('my_model')
-  return model
-
-#load model, set cache to prevent reloading
-#@st.cache(allow_output_mutation=True)
-#def load_model():
-#    model=tf.keras.models.load_model('GiannisAgr/Image_Classification_Streamlit_Deployment/my_model')
-#    return model
+    with st.spinner("Loading Model...."):
+        model = tf.keras.models.load_model('my_model')
+    return model
 
 
-
-# with st.spinner("Loading Model...."):
-#     model=load_model()
+with st.spinner("Loading Model...."):
+    model=load_model()
     
 
 def get_image(url):
