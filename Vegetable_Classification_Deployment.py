@@ -37,8 +37,8 @@ def load_model():
     return model
 
 
-with st.spinner("Loading Model...."):
-    model=load_model()
+# with st.spinner("Loading Model...."):
+#     model=load_model()
     
 
 def get_image(url):
