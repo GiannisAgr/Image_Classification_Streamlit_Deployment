@@ -29,7 +29,7 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    model = tf.keras.models.load_model('my_model')
+    model = tf.keras.models.load_model('my_model/saved_model.pb')
     return model
 
 model = load_model()
