@@ -27,20 +27,9 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
 
-# @st.cache(allow_output_mutation=True)
-# def load_model():
-# #     path = os.path.dirname(__file__)
-# #     my_file = path+'my_model_h5.h5'
-#     model = tf.keras.models.load_model('my_model_h5.h5', compile=False)
-#     return model
-
-# model = load_model()
-
 @st.cache(allow_output_mutation=True)
 def load_model():
-#     path = os.path.dirname(__file__)
-#     my_file = path+'my_model_h5.h5'
-    model = tf.keras.models.load_model('my_model_h5', compile=False)
+    model = tf.keras.models.load_model('my_model/saved_model', compile=False)
     return model
 
 model = load_model()
