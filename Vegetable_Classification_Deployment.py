@@ -33,10 +33,10 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Broccoli', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
-path = os.path.dirname(__file__)
-my_file = path+'/my_model'
-print(GiannisAgr/Image_Classification_Streamlit_Deployment/my_model/saved_model.pb)
-model = tf.keras.models.load_model(my_file)
+#path = os.path.dirname(__file__)
+my_file = 'GiannisAgr/Image_Classification_Streamlit_Deployment/my_model/saved_model.pb'
+#model = tf.keras.models.load_model(my_file)
+model = tf.saved_model.load(my_file)
 
 #load model, set cache to prevent reloading
 #@st.cache(allow_output_mutation=True)
