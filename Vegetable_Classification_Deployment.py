@@ -6,7 +6,6 @@ import os
 
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.models import load_model
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,8 +35,7 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
 
 path = os.path.dirname(__file__)
 my_file = path+'/saved_model.pb'
-#model = tf.keras.models.load_model(my_file, compile=False)
-model = load_model(my_file, compile=False)
+model = tf.keras.models.load_model(my_file, compile=False)
 
 def get_image(url):
     img = requests.get(url)
