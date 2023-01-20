@@ -28,13 +28,15 @@ class_names = ['Bean', 'Bitter_Gourd', 'Bottle_Gourd', 'Brinjal',
                'Cucumber', 'Papaya', 'Potato', 'Pumpkin', 'Radish', 'Tomato']
 
 
-@st.cache(allow_output_mutation=True)
-def load_model():
-#     path = os.path.dirname(__file__)
-#     my_file = path+'model.pkl'
-#     model = tf.keras.models.load_model(my_file, compile=False)
-    model = pickle.load('model.pkl')
-    return model
+# @st.cache(allow_output_mutation=True)
+# def load_model():
+# #     path = os.path.dirname(__file__)
+# #     my_file = path+'model.pkl'
+# #     model = tf.keras.models.load_model(my_file, compile=False)
+#     model = pickle.load('model.pkl')
+#     return model
+
+model = pickle.load(open('model.pkl','rb'))
 
 @st.cache
 def get_image(url):
@@ -56,7 +58,7 @@ if url:
     if Classify:
         st.write("")
         st.write("Classifying...")
-        label = get_prediction_single_image(load_model(), image)
+        label = get_prediction_single_image(model, image)
         st.write(str(label))
 else:
     st.write("Paste Image URL")
